@@ -5,3 +5,10 @@ C:\Users\abhkrishnan\source\repos\OnboardingSystem\OnboardingSystem\obj\Debug\On
 C:\Users\abhkrishnan\source\repos\OnboardingSystem\OnboardingSystem\obj\Debug\OnboardingSystem.csproj.CoreCompileInputs.cache
 C:\Users\abhkrishnan\source\repos\OnboardingSystem\OnboardingSystem\obj\Debug\OnboardingSystem.exe
 C:\Users\abhkrishnan\source\repos\OnboardingSystem\OnboardingSystem\obj\Debug\OnboardingSystem.pdb
+C:\.NET Examples\OnboardingSystem\OnboardingSystem\bin\Debug\OnboardingSystem.exe.config
+C:\.NET Examples\OnboardingSystem\OnboardingSystem\bin\Debug\OnboardingSystem.exe
+C:\.NET Examples\OnboardingSystem\OnboardingSystem\bin\Debug\OnboardingSystem.pdb
+C:\.NET Examples\OnboardingSystem\OnboardingSystem\obj\Debug\OnboardingSystem.csproj.AssemblyReference.cache
+C:\.NET Examples\OnboardingSystem\OnboardingSystem\obj\Debug\OnboardingSystem.csproj.CoreCompileInputs.cache
+C:\.NET Examples\OnboardingSystem\OnboardingSystem\obj\Debug\OnboardingSystem.exe
+C:\.NET Examples\OnboardingSystem\OnboardingSystem\obj\Debug\OnboardingSystem.pdb

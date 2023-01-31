@@ -18,26 +18,6 @@ namespace OnboardingSystem
         public string JoiningDate { get; set; }
         public string EmployeeRole { get; set; }
         public ArrayList SkillSet { get; set; }
-
-
-
-        //public void AddEmployeeDetails()
-        //{
-        //    Console.WriteLine("Enter Employee Id:");
-        //    EmployeeId = Convert.ToInt32(Console.ReadLine());
-        //    Console.WriteLine("Enter Employee Name:");
-        //    EmployeeName = Console.ReadLine();
-        //    Console.WriteLine("Enter Employee Age:");
-        //    EmployeeAge = Convert.ToInt32(Console.ReadLine());
-        //    Console.WriteLine("Enter Address:");
-        //    Address = Console.ReadLine();
-        //    Console.WriteLine("Enter Phone Number:");
-        //    PhoneNumber = Convert.ToInt64(Console.ReadLine());
-        //    Console.WriteLine("Enter Email ID:");
-        //    EmailId = Console.ReadLine();
-        //    Console.WriteLine("Enter Joining Date:");
-        //    JoiningDate = Console.ReadLine();
-        //}
     }
 
 

@@ -49,6 +49,7 @@
     <Compile Include="CoreIndustrySolutions.cs" />
     <Compile Include="CoreTechnologyOps.cs" />
     <Compile Include="Employee.cs" />
+    <Compile Include="EmployeeAccess.cs" />
     <Compile Include="ISkills.cs" />
     <Compile Include="OpsTransformations.cs" />
     <Compile Include="Portfolio.cs" />
