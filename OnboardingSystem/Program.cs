@@ -31,6 +31,14 @@ namespace OnboardingSystem
                      case '3':
                         //GetSkillset();
                         break;
+
+                    case '4':
+                        //Search();
+                        break;
+
+                    case '5':
+                        cboObj.UpdateEmployee();
+                        break;
                     
                     }
                 Console.WriteLine("Do you wish to continue?(y/n)");

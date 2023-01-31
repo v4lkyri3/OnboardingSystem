@@ -8,12 +8,13 @@ namespace OnboardingSystem
 {
     class CoreIndustrySolutions:Employee,ISkills
     {
-        public void GetSkills()
+        public Employee empObj;
+
+        public CoreIndustrySolutions(Employee emp)
         {
-
+            empObj = emp;
         }
-
-        public void AddCISEmployee()
+        public void GetSkills()
         {
 
         }

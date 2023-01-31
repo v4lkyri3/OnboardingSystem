@@ -8,12 +8,13 @@ namespace OnboardingSystem
 {
     class CoreTechnologyOps:Employee,ISkills
     {
-        public void GetSkills()
+        public Employee empObj;
+
+        public CoreTechnologyOps(Employee emp)
         {
-
+            empObj = emp;
         }
-
-        public void AddCTOEmployee()
+        public void GetSkills()
         {
 
         }

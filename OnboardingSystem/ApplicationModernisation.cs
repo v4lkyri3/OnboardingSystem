@@ -8,14 +8,16 @@ namespace OnboardingSystem
 {
     class ApplicationModernisation:Employee,ISkills
     {
+        public Employee empObj;
+
+        public ApplicationModernisation(Employee emp)
+        {
+            empObj = emp;
+        }
         public void GetSkills()
         {
 
         }
 
-        public void AddAppModEmployee()
-        {
-
-        }
     }
 }

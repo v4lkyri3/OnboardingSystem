@@ -8,12 +8,13 @@ namespace OnboardingSystem
 {
     class OpsTransformations:Employee,ISkills
     {
-        public void GetSkills()
+        public Employee empObj;
+
+        public OpsTransformations(Employee emp)
         {
-
+            empObj = emp;
         }
-
-        public void AddOpsTransEmployee()
+        public void GetSkills()
         {
 
         }

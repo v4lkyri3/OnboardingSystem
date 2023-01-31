@@ -15,10 +15,11 @@ namespace OnboardingSystem
             
         }
 
-        public void AddCloudEmployee(Employee emp)
+        public CloudEngineering(Employee employeeObj)
         {
-            empObj = emp;
+            empObj = employeeObj;
         }
+
         public void PrintCloudEmployee()
         {
     
