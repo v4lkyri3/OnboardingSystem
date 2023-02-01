@@ -8,10 +8,20 @@ namespace OnboardingSystem
 {
     public class Class1:Employee
     {
-        void Data()
+        public Employee emp1;
+        public Employee emp2;
+        public Employee emp3;
+        public Employee emp4;
+        public Employee emp5;
+        public Employee emp6;
+        public Employee emp7;
+        public Employee emp8;
+        public Employee emp9;
+        public Employee emp10;
+        public void Data()
         {
-            List<Employee> emp = new List<Employee>();
-            emp[0] = new Employee()
+            
+            emp1 = new Employee()
             {
                 EmployeeId= 991,
                 EmployeeName="Phil",
@@ -22,7 +32,8 @@ namespace OnboardingSystem
                 JoiningDate = "16-10-2014",
                 SkillSet = {"Java","C#","MongoDB"}
             };
-            emp[1] = new Employee()
+
+            emp2 = new Employee()
             {
                 EmployeeId = 992,
                 EmployeeName = "Hill",
@@ -33,7 +44,8 @@ namespace OnboardingSystem
                 JoiningDate = "8-10-2020",
                 SkillSet = { "Selenium", "C#" }
             };
-            emp[2] = new Employee()
+
+            emp3 = new Employee()
             {
                 EmployeeId = 993,
                 EmployeeName = "Billie",
@@ -44,7 +56,8 @@ namespace OnboardingSystem
                 JoiningDate = "27-2-2017",
                 SkillSet = { "C", "C++" }
             };
-            emp[3] = new Employee()
+
+            emp4 = new Employee()
             {
                 EmployeeId=994,
                 EmployeeName = "Edward",
@@ -56,7 +69,7 @@ namespace OnboardingSystem
                 SkillSet = { "Python", "Java" }
             };
 
-            emp[4] = new Employee()
+            emp5 = new Employee()
             {
                 EmployeeId = 995,
                 EmployeeName = "Peeta",
@@ -68,7 +81,7 @@ namespace OnboardingSystem
                 SkillSet = { "Java" }
             };
 
-            emp[5] = new Employee()
+            emp6 = new Employee()
             {
                 EmployeeId = 996,
                 EmployeeName = "Gunther",
@@ -80,7 +93,7 @@ namespace OnboardingSystem
                 SkillSet = { "C#","AWS" }
             };
 
-            emp[6] = new Employee()
+            emp7 = new Employee()
             {
                 EmployeeId = 997,
                 EmployeeName = "Ronald",
@@ -92,7 +105,7 @@ namespace OnboardingSystem
                 SkillSet = { "MongoDB", "Python" }
             };
 
-            emp[7] = new Employee()
+            emp8 = new Employee()
             {
                 EmployeeId = 998,
                 EmployeeName = "Four",
@@ -104,7 +117,7 @@ namespace OnboardingSystem
                 SkillSet = { "C#", "C++","Azure" }
             };
 
-            emp[8] = new Employee()
+            emp9 = new Employee()
             {
                 EmployeeId = 999,
                 EmployeeName = "Newt",
@@ -115,8 +128,7 @@ namespace OnboardingSystem
                 JoiningDate = "16-05-2013",
                 SkillSet = { "Python", "C", "Selenium" }
             };
-
-            emp[9] = new Employee()
+            emp10 = new Employee()
             {
                 EmployeeId = 1000,
                 EmployeeName = "Sheldon",
@@ -127,8 +139,6 @@ namespace OnboardingSystem
                 JoiningDate = "03-01-2022",
                 SkillSet = {"C"}
             };
-
-
 
         }
     }

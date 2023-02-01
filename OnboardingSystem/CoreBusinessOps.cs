@@ -241,5 +241,28 @@ namespace OnboardingSystem
             }
             return empObj;
         }
+
+        public void Load()
+        {
+            Class1 c1 = new Class1();
+            c1.Data();
+            CloudEngineering ce;
+            CoreTechnologyOps cto;
+            CoreIndustrySolutions cis;
+            ApplicationModernisation ami;
+            OpsTransformations opt;
+
+            CloudEngineeringsList.Add(ce = new CloudEngineering(c1.emp1));
+            CloudEngineeringsList.Add(ce = new CloudEngineering(c1.emp2));
+            CoreTechnologyOpsList.Add(cto = new CoreTechnologyOps(c1.emp3));
+            CoreTechnologyOpsList.Add(cto = new CoreTechnologyOps(c1.emp4));
+            CoreIndustrySolutionsList.Add(cis = new CoreIndustrySolutions(c1.emp5));
+            CoreIndustrySolutionsList.Add(cis = new CoreIndustrySolutions(c1.emp6));
+            ApplicationModernisationList.Add(ami = new ApplicationModernisation(c1.emp7));
+            ApplicationModernisationList.Add(ami = new ApplicationModernisation(c1.emp8));
+            OpsTransformationsList.Add(opt = new OpsTransformations(c1.emp9));
+            OpsTransformationsList.Add(opt = new OpsTransformations(c1.emp10));
+
+        }
     }
 }

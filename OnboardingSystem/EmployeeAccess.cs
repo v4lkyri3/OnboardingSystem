@@ -17,7 +17,7 @@ namespace OnboardingSystem
             {
                 Count += 1;
                 emp.EmployeeId = Count;
-                Console.WriteLine("Enter Employee Name:");
+                Console.WriteLine("\nEnter Employee Name:");
                 emp.EmployeeName = Console.ReadLine();
                 //Console.WriteLine("Enter Employee Age:");
                 //emp.EmployeeAge = Convert.ToInt32(Console.ReadLine());
@@ -72,7 +72,7 @@ namespace OnboardingSystem
         {
             try
             {
-                Console.WriteLine("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}", empObj.EmployeeId, empObj.EmployeeName, empObj.EmployeeAge, empObj.Address,
+                Console.WriteLine("\n{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}", empObj.EmployeeId, empObj.EmployeeName, empObj.EmployeeAge, empObj.Address,
                 empObj.PhoneNumber, empObj.EmailId, empObj.JoiningDate);
                 Console.Write("Skills: ");
                 foreach (string item in empObj.SkillSet)

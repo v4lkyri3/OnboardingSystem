@@ -15,6 +15,7 @@ namespace OnboardingSystem
                 char ch;
                 char choice = 'y';
                 CoreBusinessOps cboObj = new CoreBusinessOps();
+                cboObj.Load();
                 while (choice == 'y')
                 {
 
