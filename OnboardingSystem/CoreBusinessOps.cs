@@ -157,9 +157,11 @@ namespace OnboardingSystem
                 switch (Offering)
                 {
                     case '1':
+
                         foreach (string item in CloudEngineering.Skills)
                         {
                             Console.WriteLine(item);
+
                         }
                         break;
                     case '2':

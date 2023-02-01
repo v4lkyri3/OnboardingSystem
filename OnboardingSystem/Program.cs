@@ -28,7 +28,6 @@ namespace OnboardingSystem
                             break;
                         case '2':
                             cboObj.PrintDetails();
-                            Console.WriteLine("Employee Printed");
                             break;
                         case '3':
                             cboObj.GetSkillsReq();
@@ -47,7 +46,7 @@ namespace OnboardingSystem
                             break;
 
                     }
-                    Console.WriteLine("Do you wish to continue?(y/n)");
+                    Console.WriteLine("\nDo you wish to continue?(y/n)");
                     choice = Convert.ToChar(Console.ReadLine());
                     Console.Clear();
                 }

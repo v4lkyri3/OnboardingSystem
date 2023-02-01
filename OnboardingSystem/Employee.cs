@@ -17,7 +17,7 @@ namespace OnboardingSystem
         public string  EmailId { get; set; }
         public string JoiningDate { get; set; }
         public string EmployeeRole { get; set; }
-        public List<string> SkillSet { get; set; }
+        public List<string> SkillSet = new List<string>();
     }
 
 

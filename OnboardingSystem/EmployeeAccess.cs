@@ -29,6 +29,15 @@ namespace OnboardingSystem
                 //emp.EmailId = Console.ReadLine();
                 //Console.WriteLine("Enter Joining Date:");
                 //emp.JoiningDate = Console.ReadLine();
+                Console.WriteLine("Enter the no. of skills you have:");
+                int n=Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Enter all your skills:");
+                for (int i=0;i<n;i++)
+                {
+                    emp.SkillSet.Add(Console.ReadLine());
+                }
+
+                
             }
             catch (Exception ex)
             {
@@ -65,6 +74,11 @@ namespace OnboardingSystem
             {
                 Console.WriteLine("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}", empObj.EmployeeId, empObj.EmployeeName, empObj.EmployeeAge, empObj.Address,
                 empObj.PhoneNumber, empObj.EmailId, empObj.JoiningDate);
+                Console.Write("Skills: ");
+                foreach (string item in empObj.SkillSet)
+                {
+                    Console.Write("{0} ",item);
+                }
             }
             catch (Exception e)
             {
