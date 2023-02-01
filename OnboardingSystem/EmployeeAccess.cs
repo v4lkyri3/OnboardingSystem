@@ -89,7 +89,7 @@ namespace OnboardingSystem
         }
 
 
-        public Employee Search(Employee emp,int id,int op=0)
+        public Employee Search(Employee emp,int id)
         {
             Employee temp = null;
             try
