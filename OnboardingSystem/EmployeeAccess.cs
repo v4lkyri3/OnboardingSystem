@@ -91,6 +91,7 @@ namespace OnboardingSystem
                 {
                     Console.Write("{0} ",item);
                 }
+                Console.WriteLine("\n");
             }
             catch (Exception e)
             {
@@ -128,9 +129,36 @@ namespace OnboardingSystem
 
 
         //Updating Employee Details
-        public void Update(Employee emp)
+        public Employee Update(Employee emp)
         {
-            Console.WriteLine("Enter the");   
+            char ch;
+            try
+            {
+                Console.WriteLine("Enter the details to be updated:");
+                Console.WriteLine("1.Address\n2.Phone Number\n3.Email ID");
+                ch = Convert.ToChar(Console.ReadLine());
+                if (ch == '1')
+                {
+                    Console.WriteLine("Enter new Address:");
+                    emp.Address = Console.ReadLine();
+                }
+                else if (ch == '2')
+                {
+                    Console.WriteLine("Enter the new Phone Number:");
+                    emp.PhoneNumber = Convert.ToInt64(Console.ReadLine());
+                }
+                else if (ch == '3')
+                {
+                    Console.WriteLine("Enter the new Email ID:");
+                    emp.EmailId = Console.ReadLine();
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return emp;
         }
     }
 

@@ -40,13 +40,19 @@ namespace OnboardingSystem
                             emp = cboObj.SearchEmployee(id);
                             break;
                         case '5':
-                            Console.WriteLine("Enter the employee ID:");
+                            Console.WriteLine("Enter the employee ID to Delete:");
                             int uid = Convert.ToInt32(Console.ReadLine());
                             cboObj.DeleteEmployee(uid);
                             break;
 
+                        case '6':
+                            Console.WriteLine("Enter the employee ID to Update:");
+                            int updateID = Convert.ToInt32(Console.ReadLine());
+                            cboObj.UpdateEmployee(updateID);
+                            break;
+
                         case '7':
-                            Console.WriteLine("Enter the employee ID to Delete");
+                            Console.WriteLine("Enter the employee ID:");
                             int sid = Convert.ToInt32(Console.ReadLine());
                             cboObj.CommonSkills(sid);
                             break;

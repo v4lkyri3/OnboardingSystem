@@ -158,7 +158,7 @@ namespace OnboardingSystem
             }
             if(empObj==null)
                 Console.WriteLine("Employee not Found!!");
-            return empObj;
+            return null;
         }
 
 
@@ -171,8 +171,9 @@ namespace OnboardingSystem
             {
                 Employee eobj;
                 eobj = SearchEmployee(id);
-                Console.WriteLine("\n{0}",eobj.EmployeeRole);
-                if(eobj.EmployeeRole.Equals("Cloud Engineering"))
+                if (eobj == null)
+                    return;
+                else if (eobj.EmployeeRole.Equals("Cloud Engineering"))
                 {
                     foreach (CloudEngineering item in CloudEngineeringsList)
                     {
@@ -182,7 +183,7 @@ namespace OnboardingSystem
                             break;
                         }
                     }
-                    
+
                 }
 
                 else if (eobj.EmployeeRole.Equals("Core Industry Solutions"))
@@ -210,7 +211,7 @@ namespace OnboardingSystem
                     }
 
                 }
-                
+
                 else if (eobj.EmployeeRole.Equals("Application Modernisation"))
                 {
                     foreach (ApplicationModernisation item in ApplicationModernisationList)
@@ -231,10 +232,10 @@ namespace OnboardingSystem
                         if (item.empObj.EmployeeId == id)
                         {
                             OpsTransformationsList.Remove(item);
-                            
+
                             break;
                         }
-                           
+
                     }
                 }
                 Console.WriteLine("\nDeleted Employee");
@@ -247,6 +248,89 @@ namespace OnboardingSystem
             }
         }
 
+
+
+        //Update Employee Details
+        public void UpdateEmployee(int id)
+        {
+            try
+            {
+                Employee eobj;
+                int i = 0;
+                eobj = SearchEmployee(id);
+                if (eobj == null)
+                    return;
+                else if (eobj.EmployeeRole.Equals("Cloud Engineering"))
+                {
+                    for (i = 0; i < CloudEngineeringsList.Count; i++)
+                    {
+                        if (CloudEngineeringsList[i].empObj.EmployeeId == id)
+                        {
+                            CloudEngineeringsList[i].empObj = employeeAccess.Update(CloudEngineeringsList[i].empObj);
+                            break;
+                        }
+                    }
+
+                }
+
+                else if (eobj.EmployeeRole.Equals("Core Industry Solutions"))
+                {
+                    for (i = 0; i < CoreIndustrySolutionsList.Count; i++)
+                    {
+                        if (CoreIndustrySolutionsList[i].empObj.EmployeeId == id)
+                        {
+                            CoreIndustrySolutionsList[i].empObj = employeeAccess.Update(CoreIndustrySolutionsList[i].empObj);
+                            break;
+                        }
+                    }
+
+                }
+
+                else if (eobj.EmployeeRole.Equals("Core Technology Operations"))
+                {
+                    for (i = 0; i < CoreTechnologyOpsList.Count; i++)
+                    {
+                        if (CoreTechnologyOpsList[i].empObj.EmployeeId == id)
+                        {
+                            CoreTechnologyOpsList[i].empObj = employeeAccess.Update(CoreTechnologyOpsList[i].empObj);
+                            break;
+                        }
+                    }
+
+                }
+
+                else if (eobj.EmployeeRole.Equals("Application Modernisation"))
+                {
+                    for (i = 0; i < ApplicationModernisationList.Count; i++)
+                    {
+                        if (ApplicationModernisationList[i].empObj.EmployeeId == id)
+                        {
+                            ApplicationModernisationList[i].empObj = employeeAccess.Update(ApplicationModernisationList[i].empObj);
+                            break;
+                        }
+                    }
+
+                }
+
+                else if (eobj.EmployeeRole.Equals("Operation Transformations"))
+                {
+                    for (i = 0; i < OpsTransformationsList.Count; i++)
+                    {
+                        if (OpsTransformationsList[i].empObj.EmployeeId == id)
+                        {
+                            OpsTransformationsList[i].empObj = employeeAccess.Update(OpsTransformationsList[i].empObj);
+                            break;
+                        }
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
 
 
         //Get Common Skills
@@ -308,6 +392,7 @@ namespace OnboardingSystem
                     {
                         Console.Write("{0}  ", item);
                     }
+                    Console.WriteLine("\n");
                 }
                 else
                 {
