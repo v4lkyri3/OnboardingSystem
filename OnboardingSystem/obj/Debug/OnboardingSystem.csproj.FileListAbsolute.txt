@@ -1,8 +1,0 @@
-C:\Users\pavilnu\Downloads\OnboardingSystem\OnboardingSystem\OnboardingSystem\bin\Debug\OnboardingSystem.exe.config
-C:\Users\pavilnu\Downloads\OnboardingSystem\OnboardingSystem\OnboardingSystem\bin\Debug\OnboardingSystem.exe
-C:\Users\pavilnu\Downloads\OnboardingSystem\OnboardingSystem\OnboardingSystem\bin\Debug\OnboardingSystem.pdb
-C:\Users\pavilnu\Downloads\OnboardingSystem\OnboardingSystem\OnboardingSystem\obj\Debug\OnboardingSystem.csproj.AssemblyReference.cache
-C:\Users\pavilnu\Downloads\OnboardingSystem\OnboardingSystem\OnboardingSystem\obj\Debug\OnboardingSystem.csproj.SuggestedBindingRedirects.cache
-C:\Users\pavilnu\Downloads\OnboardingSystem\OnboardingSystem\OnboardingSystem\obj\Debug\OnboardingSystem.csproj.CoreCompileInputs.cache
-C:\Users\pavilnu\Downloads\OnboardingSystem\OnboardingSystem\OnboardingSystem\obj\Debug\OnboardingSystem.exe
-C:\Users\pavilnu\Downloads\OnboardingSystem\OnboardingSystem\OnboardingSystem\obj\Debug\OnboardingSystem.pdb
