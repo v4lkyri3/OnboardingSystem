@@ -30,6 +30,7 @@ namespace OnboardingSystem
                 PhoneNumber=945638262,
                 EmailId = "philips@del.com",
                 JoiningDate = "16-10-2014",
+                EmployeeRole= "Cloud Engineering",
                 SkillSet = {"Java","C#","MongoDB"}
             };
 
@@ -42,6 +43,7 @@ namespace OnboardingSystem
                 PhoneNumber = 9463764262,
                 EmailId = "hilaryclinton@red.com",
                 JoiningDate = "8-10-2020",
+                EmployeeRole = "Cloud Engineering",
                 SkillSet = { "Selenium", "C#" }
             };
 
@@ -54,6 +56,7 @@ namespace OnboardingSystem
                 PhoneNumber = 9463756382,
                 EmailId = "demegorgans@st.com",
                 JoiningDate = "27-2-2017",
+                EmployeeRole = "Core Technology Operations",
                 SkillSet = { "C", "C++" }
             };
 
@@ -66,6 +69,7 @@ namespace OnboardingSystem
                 PhoneNumber = 8163756382,
                 EmailId = "twilight@mayor.com",
                 JoiningDate = "2-12-2014",
+                EmployeeRole = "Core Technology Operations",
                 SkillSet = { "Python", "Java" }
             };
 
@@ -78,6 +82,7 @@ namespace OnboardingSystem
                 PhoneNumber = 9863756382,
                 EmailId = "hunger@games.com",
                 JoiningDate = "22-09-2021",
+                EmployeeRole = "Core Industry Solutions",
                 SkillSet = { "Java" }
             };
 
@@ -90,6 +95,7 @@ namespace OnboardingSystem
                 PhoneNumber = 9863756452,
                 EmailId = "friends@ph.com",
                 JoiningDate = "12-12-2012",
+                EmployeeRole = "Core Industry Solutions",
                 SkillSet = { "C#","AWS" }
             };
 
@@ -102,6 +108,7 @@ namespace OnboardingSystem
                 PhoneNumber = 6745756454,
                 EmailId = "luna@hogwarts.com",
                 JoiningDate = "31-07-2018",
+                EmployeeRole = "Application Modernisation",
                 SkillSet = { "MongoDB", "Python" }
             };
 
@@ -114,6 +121,7 @@ namespace OnboardingSystem
                 PhoneNumber = 7645756454,
                 EmailId = "Four@suz.com",
                 JoiningDate = "12-07-2012",
+                EmployeeRole = "Application Modernisation",
                 SkillSet = { "C#", "C++","Azure" }
             };
 
@@ -126,6 +134,7 @@ namespace OnboardingSystem
                 PhoneNumber = 7645345054,
                 EmailId = "NewtScamandar@fb.com",
                 JoiningDate = "16-05-2013",
+                EmployeeRole = "Operation Transformations",
                 SkillSet = { "Python", "C", "Selenium" }
             };
             emp10 = new Employee()
@@ -137,6 +146,7 @@ namespace OnboardingSystem
                 PhoneNumber = 8945345054,
                 EmailId = "sheldon@bbt.com",
                 JoiningDate = "03-01-2022",
+                EmployeeRole = "Operation Transformations",
                 SkillSet = {"C"}
             };
 
