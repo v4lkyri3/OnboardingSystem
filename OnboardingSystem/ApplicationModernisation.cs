@@ -19,13 +19,17 @@ namespace OnboardingSystem
             empObj.EmployeeRole = "Application Modernisation";
         }
 
-        public void GetSkills()
+        public List<string> GetSkills()
         {
-            Console.WriteLine("The Skillset you would require in this offering:");
-            foreach (string item in SkillSet)
+            List<string> temp = new List<string>();
+            foreach (string item in empObj.SkillSet)
             {
-                Console.WriteLine(item);
+                if (Skills.Contains(item))
+                {
+                    temp.Add(item);
+                }
             }
+            return temp;
 
         }
 

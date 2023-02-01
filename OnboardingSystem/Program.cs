@@ -18,8 +18,7 @@ namespace OnboardingSystem
                 cboObj.Load();
                 while (choice == 'y')
                 {
-
-                    Console.WriteLine("1.Enter Employee \n2.Print Details \n3.Check Skillset \n4.Search Employee \n5.Delete Employee\n6.Update Employee");
+                    Console.WriteLine("1.Enter Employee \n2.Print Details \n3.Check Required Skillset \n4.Search Employee \n5.Delete Employee\n6.Update Employee\n7.Show Common Skills");
                     Console.Write("\nEnter your Choice:");
                     ch = Convert.ToChar(Console.ReadLine());
                     switch (ch)
@@ -41,9 +40,15 @@ namespace OnboardingSystem
                             emp = cboObj.SearchEmployee(id);
                             break;
                         case '5':
-                            Console.WriteLine("Enter the employee ID to Delete");
+                            Console.WriteLine("Enter the employee ID:");
                             int uid = Convert.ToInt32(Console.ReadLine());
                             cboObj.DeleteEmployee(uid);
+                            break;
+
+                        case '7':
+                            Console.WriteLine("Enter the employee ID to Delete");
+                            int sid = Convert.ToInt32(Console.ReadLine());
+                            cboObj.CommonSkills(sid);
                             break;
 
                     }

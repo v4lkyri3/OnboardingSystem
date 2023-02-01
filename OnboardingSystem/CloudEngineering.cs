@@ -12,15 +12,19 @@ namespace OnboardingSystem
         public Employee empObj;
         public static List<string> Skills = new List<string>()
             {
-                ".NET","Kafka","Python","Node","React","Azure","MongoDb","Angular"
+                "C#","Kafka","Python","Node","React","Azure","MongoDb","Angular"
             };
-    public void GetSkills()
+        public List<string> GetSkills()
         {
-            Console.WriteLine("The Skillset you would require in this offering:");
-            foreach (string item in SkillSet)
+            List<string> temp = new List<string>();
+            foreach (string item in empObj.SkillSet)
             {
-                Console.WriteLine(item);
+                if(Skills.Contains(item))
+                {
+                    temp.Add(item);
+                }
             }
+            return temp;
 
         }
 

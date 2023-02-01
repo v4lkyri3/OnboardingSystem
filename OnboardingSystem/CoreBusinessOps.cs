@@ -21,6 +21,7 @@ namespace OnboardingSystem
         
         EmployeeAccess employeeAccess = new EmployeeAccess();
 
+        //Adding Employee
         public void AddEmployee()
         {
             try
@@ -61,6 +62,7 @@ namespace OnboardingSystem
             
         }
 
+        //Printing  Employee
         public void PrintDetails()
         {
 
@@ -111,6 +113,58 @@ namespace OnboardingSystem
             
         }
 
+
+        //Searching Employee
+        public Employee SearchEmployee(int id)
+        {
+            Employee empObj = new Employee();
+            try
+            {
+                foreach (CloudEngineering item in CloudEngineeringsList)
+                {
+                    empObj = employeeAccess.Search(item.empObj, id);
+                    if (empObj != null)
+                        return empObj;
+                }
+                foreach (CoreIndustrySolutions item in CoreIndustrySolutionsList)
+                {
+                    empObj = employeeAccess.Search(item.empObj, id);
+                    if (empObj != null)
+                        return empObj;
+                }
+                foreach (CoreTechnologyOps item in CoreTechnologyOpsList)
+                {
+                    empObj = employeeAccess.Search(item.empObj, id);
+                    if (empObj != null)
+                        return empObj;
+                }
+                foreach (ApplicationModernisation item in ApplicationModernisationList)
+                {
+                    empObj = employeeAccess.Search(item.empObj, id);
+                    if (empObj != null)
+                        return empObj;
+                }
+                foreach (OpsTransformations item in OpsTransformationsList)
+                {
+                    empObj = employeeAccess.Search(item.empObj, id);
+                    if (empObj != null)
+                        return empObj;
+                }
+            }
+            catch (Exception e)
+            {
+
+                Console.WriteLine(e.Message);
+            }
+            if(empObj==null)
+                Console.WriteLine("Employee not Found!!");
+            return empObj;
+        }
+
+
+
+
+        //Deleting Employee
         public void DeleteEmployee(int id)
         {
             try
@@ -149,6 +203,85 @@ namespace OnboardingSystem
                 Console.WriteLine(e.Message);
             }
         }
+
+
+
+        //Get Common Skills
+
+        public void CommonSkills(int eid)
+        {
+            Employee emp;
+            string[] skills = new string[20];
+            try
+            {
+                Offering = employeeAccess.CheckOffering();
+                switch (Offering)
+                {
+                    case '1':
+                        foreach (CloudEngineering item in CloudEngineeringsList)
+                        {
+                            emp = employeeAccess.Search(item.empObj, eid);
+                            if (emp != null)
+                                item.GetSkills().CopyTo(skills);
+                        }
+                        break;
+                    case '2':
+                        foreach (CoreTechnologyOps item in CoreTechnologyOpsList)
+                        {
+                            emp = employeeAccess.Search(item.empObj, eid);
+                            if (emp != null)
+                                item.GetSkills().CopyTo(skills);
+                        }
+                        break;
+                    case '3':
+                        foreach (CoreIndustrySolutions item in CoreIndustrySolutionsList)
+                        {
+                            emp = employeeAccess.Search(item.empObj, eid);
+                            if (emp != null)
+                                item.GetSkills().CopyTo(skills);
+                        }
+                        break;
+                    case '4':
+                        foreach (ApplicationModernisation item in ApplicationModernisationList)
+                        {
+                            emp = employeeAccess.Search(item.empObj, eid);
+                            if (emp != null)
+                                item.GetSkills().CopyTo(skills);
+                        }
+                        break;
+                    case '5':
+                        foreach (OpsTransformations item in OpsTransformationsList)
+                        {
+                            emp = employeeAccess.Search(item.empObj, eid);
+                            if (emp != null)
+                                item.GetSkills().CopyTo(skills);
+                        }
+                        break;
+                }
+                if (skills.Length > 0 && skills!=null)
+                {
+                    Console.WriteLine("\nCommon Skills are:");
+                    foreach (string item in skills)
+                    {
+                        Console.Write("{0}  ", item);
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("\nNo common Skills!!");
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                Console.WriteLine("\nEnter correct Sub-Domain of the Employee");
+                CommonSkills(eid);
+            }
+        }
+
+
+
+        //Get Required Skills
         public void GetSkillsReq()
         {
             try
@@ -198,50 +331,7 @@ namespace OnboardingSystem
         }
 
 
-        public Employee  SearchEmployee(int id)
-        {
-            Employee empObj = new Employee();
-            try
-            {
-                foreach (CloudEngineering item in CloudEngineeringsList)
-                {
-                    empObj = employeeAccess.Search(item.empObj, id);
-                    if(empObj!=null)
-                        return empObj;
-                }
-                foreach (CoreIndustrySolutions item in CoreIndustrySolutionsList)
-                {
-                    empObj = employeeAccess.Search(item.empObj, id);
-                    if (empObj != null)
-                        return empObj;
-                }
-                foreach (CoreTechnologyOps item in CoreTechnologyOpsList)
-                {
-                    empObj = employeeAccess.Search(item.empObj, id);
-                    if (empObj != null)
-                        return empObj;
-                }
-                foreach (ApplicationModernisation item in ApplicationModernisationList)
-                {
-                    empObj = employeeAccess.Search(item.empObj, id);
-                    if (empObj != null)
-                        return empObj;
-                }
-                foreach (OpsTransformations item in OpsTransformationsList)
-                {
-                    empObj = employeeAccess.Search(item.empObj, id);
-                    if (empObj != null)
-                        return empObj;
-                }
-            }
-            catch (Exception e)
-            {
-
-                Console.WriteLine(e.Message);
-            }
-            return empObj;
-        }
-
+        //Load Predefined Data
         public void Load()
         {
             Class1 c1 = new Class1();

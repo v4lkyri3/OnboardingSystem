@@ -10,6 +10,34 @@ namespace OnboardingSystem
     class EmployeeAccess
     {
         public static int Count = 1000;
+
+
+
+
+        //Ask for Offering Details
+        public char CheckOffering()
+        {
+            char offering = '0';
+            try
+            {
+                Console.WriteLine("\n1.Cloud Engineering \n2.Core Technology Operations \n3.Core Industry Solutions " +
+               "\n4.Application Modernisation \n5.Operations Transformations");
+                Console.Write("\nEnter the subdomain:");
+                offering = Convert.ToChar(Console.ReadLine());
+            }
+            catch (Exception e)
+            {
+
+                Console.WriteLine(e.Message);
+            }
+
+            return offering;
+        }
+
+
+
+
+        //Add details to Employee
         public Employee AddEmployeeDetails()
         {
             Employee emp = new Employee();
@@ -48,32 +76,16 @@ namespace OnboardingSystem
             return emp;
         }
 
-        public char CheckOffering()
-        {
-            char offering='0';
-            try
-            {
-                Console.WriteLine("\n1.Cloud Engineering \n2.Core Technology Operations \n3.Core Industry Solutions " +
-               "\n4.Application Modernisation \n5.Operations Transformations");
-                Console.Write("\nEnter the subdomain of the employee:");
-                offering = Convert.ToChar(Console.ReadLine());
-            }
-            catch (Exception e)
-            {
-
-                Console.WriteLine(e.Message);
-            }
-           
-            return offering;
-        }
 
 
+
+        //Print Employee Details
         public void PrintDetails(Employee empObj)
         {
             try
             {
                 Console.WriteLine("\n{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}", empObj.EmployeeId, empObj.EmployeeName, empObj.EmployeeAge, empObj.Address,
-                empObj.PhoneNumber, empObj.EmailId, empObj.JoiningDate);
+                empObj.PhoneNumber, empObj.EmailId, empObj.JoiningDate,empObj);
                 Console.Write("Skills: ");
                 foreach (string item in empObj.SkillSet)
                 {
@@ -89,6 +101,9 @@ namespace OnboardingSystem
         }
 
 
+
+
+        //Searching Employee Details by ID
         public Employee Search(Employee emp,int id)
         {
             Employee temp = null;
@@ -100,8 +115,8 @@ namespace OnboardingSystem
                     Console.Clear();
                     Console.WriteLine("Employee Found in {0}!!", emp.EmployeeRole);
                     PrintDetails(emp);
+                    return temp;
                 }
-                Console.WriteLine("Employee Not Found!!");
             }
             catch (Exception e)
             {
@@ -111,6 +126,8 @@ namespace OnboardingSystem
             return temp;
         }
 
+
+        //Updating Employee Details
         public void Update(Employee emp)
         {
             Console.WriteLine("Enter the");   

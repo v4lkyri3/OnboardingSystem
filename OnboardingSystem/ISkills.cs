@@ -8,6 +8,6 @@ namespace OnboardingSystem
 {
     public interface ISkills
     {
-       void GetSkills();
+       List<string> GetSkills();
     }
 }
