@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OnboardingSystem
 {
-    internal class Class1:Employee
+    class Class1:Employee
     {
         void Data()
         {
