@@ -171,30 +171,73 @@ namespace OnboardingSystem
             {
                 Employee eobj;
                 eobj = SearchEmployee(id);
-                if(CloudEngineeringsList.Contains(eobj))
+                Console.WriteLine("\n{0}",eobj.EmployeeRole);
+                if(eobj.EmployeeRole.Equals("Cloud Engineering"))
                 {
+                    foreach (CloudEngineering item in CloudEngineeringsList)
+                    {
+                        if (item.empObj.EmployeeId == id)
+                        {
+                            CloudEngineeringsList.Remove(item);
+                            break;
+                        }
+                    }
                     
                 }
 
-                else if (CoreTechnologyOpsList.Contains(eobj))
+                else if (eobj.EmployeeRole.Equals("Core Industry Solutions"))
                 {
+                    foreach (CoreIndustrySolutions item in CoreIndustrySolutionsList)
+                    {
+                        if (item.empObj.EmployeeId == id)
+                        {
+                            CoreIndustrySolutionsList.Remove(item);
+                            break;
+                        }
+                    }
 
                 }
 
-                else if (CoreIndustrySolutionsList.Contains(eobj))
+                else if (eobj.EmployeeRole.Equals("Core Technology Operations"))
                 {
+                    foreach (CoreTechnologyOps item in CoreTechnologyOpsList)
+                    {
+                        if (item.empObj.EmployeeId == id)
+                        {
+                            CoreTechnologyOpsList.Remove(item);
+                            break;
+                        }
+                    }
 
                 }
                 
-                else if (ApplicationModernisationList.Contains(eobj))
+                else if (eobj.EmployeeRole.Equals("Application Modernisation"))
                 {
+                    foreach (ApplicationModernisation item in ApplicationModernisationList)
+                    {
+                        if (item.empObj.EmployeeId == id)
+                        {
+                            ApplicationModernisationList.Remove(item);
+                            break;
+                        }
+                    }
 
                 }
 
-                else if (OpsTransformationsList.Contains(eobj))
+                else if (eobj.EmployeeRole.Equals("Operation Transformations"))
                 {
-
+                    foreach (OpsTransformations item in OpsTransformationsList)
+                    {
+                        if (item.empObj.EmployeeId == id)
+                        {
+                            OpsTransformationsList.Remove(item);
+                            
+                            break;
+                        }
+                           
+                    }
                 }
+                Console.WriteLine("\nDeleted Employee");
 
             }
             catch (Exception e)
