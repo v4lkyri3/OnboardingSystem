@@ -10,7 +10,6 @@ namespace OnboardingSystem
     {
         //Hello Team
         public Employee empObj;
-
         public static List<string> Skills = new List<string>()
             {
                 ".NET","Kafka","Python","Node","React","Azure","MongoDb","Angular"
@@ -28,6 +27,7 @@ namespace OnboardingSystem
         public CloudEngineering(Employee employeeObj)
         {
             empObj = employeeObj;
+            empObj.EmployeeRole = "Cloud Engineering";
         }
     }
 }

@@ -16,6 +16,7 @@ namespace OnboardingSystem
         public ApplicationModernisation(Employee emp)
         {
             empObj = emp;
+            empObj.EmployeeRole = "Application Modernisation";
         }
 
         public void GetSkills()

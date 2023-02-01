@@ -16,6 +16,7 @@ namespace OnboardingSystem
         public CoreTechnologyOps(Employee emp)
         {
             empObj = emp;
+            empObj.EmployeeRole = "Core Technology Operations";
 
         }
 

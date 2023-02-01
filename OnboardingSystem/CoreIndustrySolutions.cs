@@ -17,6 +17,7 @@ namespace OnboardingSystem
         public CoreIndustrySolutions(Employee emp)
         {
             empObj = emp;
+            empObj.EmployeeRole = "Core Industry Solutions";
 
         }
 

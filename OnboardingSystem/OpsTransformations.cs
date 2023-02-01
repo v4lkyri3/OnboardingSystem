@@ -18,6 +18,7 @@ namespace OnboardingSystem
         public OpsTransformations(Employee emp)
         {
             empObj = emp;
+            empObj.EmployeeRole = "Operation Transformations";
         }
 
         public void GetSkills()

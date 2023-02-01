@@ -51,6 +51,7 @@ namespace OnboardingSystem
                         OpsTransformationsList.Add(opsTransObj);
                         break;
                 }
+                Console.WriteLine("\nEmployee Added with ID :{0}",emp.EmployeeId);
             }
             catch (Exception e)
             {
@@ -160,6 +161,40 @@ namespace OnboardingSystem
                     }
                     break;
             }
+        }
+
+
+        public int  SearchEmployee()
+        {
+            Console.WriteLine("Enter the employee ID to search");
+            int id = Convert.ToInt32(Console.ReadLine());
+            foreach (CloudEngineering item in CloudEngineeringsList)
+            {
+                if (employeeAccess.Search(item.empObj, id) == 1)
+                    return 1;
+            }
+            foreach (CoreIndustrySolutions item in CoreIndustrySolutionsList)
+            {
+                if (employeeAccess.Search(item.empObj, id) == 1)
+                    return 1;
+            }
+            foreach (CoreTechnologyOps item in CoreTechnologyOpsList)
+            {
+                if (employeeAccess.Search(item.empObj, id) == 1)
+                    return 1;
+            }
+            foreach (ApplicationModernisation item in ApplicationModernisationList)
+            {
+                if (employeeAccess.Search(item.empObj, id) == 1)
+                    return 1;
+            }
+            foreach (OpsTransformations item in OpsTransformationsList)
+            {
+                if (employeeAccess.Search(item.empObj, id) == 1)
+                    return 1;
+            }
+
+            return 0;
         }
     }
 }

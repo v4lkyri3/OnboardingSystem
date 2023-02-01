@@ -15,14 +15,14 @@ namespace OnboardingSystem
             CoreBusinessOps cboObj = new CoreBusinessOps();
             while (choice == 'y')
             {
-                Console.WriteLine("Enter your Choice:");
+               
                 Console.WriteLine("1.Enter Employee \n2.Print Details \n3.Check Skillset \n4.Search Employee \n5.Update Employee\n6.Delete Employee");
+                Console.Write("\nEnter your Choice:");
                 ch = Convert.ToChar(Console.ReadLine());
                 switch(ch)
                     {
                      case '1':
                         cboObj.AddEmployee();
-                        Console.WriteLine("Employee Added");
                            break;
                      case '2':
                         cboObj.PrintDetails();
@@ -33,7 +33,7 @@ namespace OnboardingSystem
                         break;
 
                     case '4':
-                        //Search();
+                        cboObj.SearchEmployee();
                         break;
 
                     case '5':
@@ -43,6 +43,7 @@ namespace OnboardingSystem
                     }
                 Console.WriteLine("Do you wish to continue?(y/n)");
                 choice = Convert.ToChar(Console.ReadLine());
+                Console.Clear();
             }    
         }
     }
