@@ -9,17 +9,17 @@ namespace OnboardingSystem
 {
     public class CoreBusinessOps
     {
-        List<CloudEngineering> CloudEngineeringsList = new List<CloudEngineering>();
+        List<CloudEngineering> CloudEngineeringsList = new List<CloudEngineering>(); 
         List<CoreIndustrySolutions> CoreIndustrySolutionsList = new List<CoreIndustrySolutions>();
         List<CoreTechnologyOps> CoreTechnologyOpsList = new List<CoreTechnologyOps>();
         List<ApplicationModernisation> ApplicationModernisationList = new List<ApplicationModernisation>();
         List<OpsTransformations> OpsTransformationsList = new List<OpsTransformations>();
+
+
          
         char Offering;
         
         EmployeeAccess employeeAccess = new EmployeeAccess();
-
-
 
         public void AddEmployee()
         {
@@ -66,10 +66,46 @@ namespace OnboardingSystem
         public void PrintDetails()
         {
             Console.WriteLine("EmployeeID\tEmployee Name\tAge\tAddress\tPhone Number\tEmail ID\tJoining Date");
-            foreach (CloudEngineering item in CloudEngineeringsList)
+            Console.WriteLine("Enter the subdomain of the employee");
+            Console.WriteLine("1.Cloud Engineering \n2.Core Technology Operations \n3.Core Industry Solutions " +
+                "\n4.Application Modernisation \n5.Operations Transformations");
+            Offering = Convert.ToChar(Console.ReadLine());
+
+            switch (Offering)
             {
-                item.PrintCloudEmployee();
+                case '1':
+                    foreach (CloudEngineering item in CloudEngineeringsList)
+                    {
+                        item.PrintCloudEmployee();
+                    }
+                    break;
+                case '2':
+                    foreach (CoreIndustrySolutions item in CoreIndustrySolutionsList)
+                    {
+                        item.PrintCISEmployee();
+                    }
+                    break;
+                case '3':
+                    foreach (CoreTechnologyOps item in CoreTechnologyOpsList)
+                    {
+                        item.PrintCTSEmployee();
+                    }
+                    break;
+                case '4':
+                    foreach (ApplicationModernisation item in ApplicationModernisationList)
+                    {
+                        item.PrintAMEmployee();
+                    }
+                    break;
+                case '5':
+                    foreach (OpsTransformations item in OpsTransformationsList)
+                    {
+                        item.PrintOTEmployee();
+                    }
+                    break;
+                    
             }
+            
         }
 
         public void UpdateEmployee()

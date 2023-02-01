@@ -22,11 +22,11 @@ namespace OnboardingSystem
                     {
                      case '1':
                         cboObj.AddEmployee();
-                        Console.WriteLine("Adding Employee");
+                        Console.WriteLine("Employee Added");
                            break;
                      case '2':
                         cboObj.PrintDetails();
-                        Console.WriteLine("Printing Employee");
+                        Console.WriteLine("Employee Printed");
                             break;
                      case '3':
                         //GetSkillset();

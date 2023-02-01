@@ -52,7 +52,6 @@
     <Compile Include="EmployeeAccess.cs" />
     <Compile Include="ISkills.cs" />
     <Compile Include="OpsTransformations.cs" />
-    <Compile Include="Portfolio.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
