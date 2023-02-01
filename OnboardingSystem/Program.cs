@@ -29,7 +29,7 @@ namespace OnboardingSystem
                         Console.WriteLine("Employee Printed");
                             break;
                      case '3':
-                        //GetSkillset();
+                        cboObj.GetSkillsReq();
                         break;
 
                     case '4':

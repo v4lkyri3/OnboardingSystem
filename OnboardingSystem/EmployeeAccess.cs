@@ -37,5 +37,21 @@ namespace OnboardingSystem
 
             return emp;
         }
+
+        public char CheckOffering()
+        {
+            Console.WriteLine("Enter the subdomain of the employee");
+            Console.WriteLine("1.Cloud Engineering \n2.Core Technology Operations \n3.Core Industry Solutions " +
+                "\n4.Application Modernisation \n5.Operations Transformations");
+            char offering = Convert.ToChar(Console.ReadLine());
+            return offering;
+        }
+
+
+        public void PrintDetails(Employee empObj)
+        {
+            Console.WriteLine("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}", empObj.EmployeeId, empObj.EmployeeName, empObj.EmployeeAge, empObj.Address,
+                empObj.PhoneNumber, empObj.EmailId, empObj.JoiningDate);
+        }
     }
 }

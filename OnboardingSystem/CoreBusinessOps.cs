@@ -26,10 +26,7 @@ namespace OnboardingSystem
             try
             {
                 Employee emp = employeeAccess.AddEmployeeDetails();
-                Console.WriteLine("Enter the subdomain of the employee");
-                Console.WriteLine("1.Cloud Engineering \n2.Core Technology Operations \n3.Core Industry Solutions " +
-                    "\n4.Application Modernisation \n5.Operations Transformations");
-                Offering = Convert.ToChar(Console.ReadLine());
+                Offering = employeeAccess.CheckOffering();
 
                 switch (Offering)
                 {
@@ -65,42 +62,41 @@ namespace OnboardingSystem
 
         public void PrintDetails()
         {
-         
-            Console.WriteLine("Enter the subdomain of the employee");
-            Console.WriteLine("1.Cloud Engineering \n2.Core Technology Operations \n3.Core Industry Solutions " +
-                "\n4.Application Modernisation \n5.Operations Transformations");
-            Offering = Convert.ToChar(Console.ReadLine());
+
+
+            Offering = employeeAccess.CheckOffering();
 
             switch (Offering)
             {
                 case '1':
                     foreach (CloudEngineering item in CloudEngineeringsList)
                     {
-                        item.PrintCloudEmployee();
+                        //item.PrintCloudEmployee();
+                        employeeAccess.PrintDetails(item.empObj);
                     }
                     break;
                 case '2':
                     foreach (CoreTechnologyOps item in CoreTechnologyOpsList)
                     {
-                        item.PrintCTSEmployee();
+                        employeeAccess.PrintDetails(item.empObj);
                     }
                     break;
                 case '3':
                     foreach (CoreIndustrySolutions item in CoreIndustrySolutionsList)
                     {
-                        item.PrintCISEmployee();
+                        employeeAccess.PrintDetails(item.empObj);
                     }
                     break;
                 case '4':
                     foreach (ApplicationModernisation item in ApplicationModernisationList)
                     {
-                        item.PrintAMEmployee();
+                        employeeAccess.PrintDetails(item.empObj);
                     }
                     break;
                 case '5':
                     foreach (OpsTransformations item in OpsTransformationsList)
                     {
-                        item.PrintOTEmployee();
+                        employeeAccess.PrintDetails(item.empObj);
                     }
                     break;
                     
@@ -110,10 +106,7 @@ namespace OnboardingSystem
 
         public void UpdateEmployee()
         {
-            Console.WriteLine("Enter the subdomain of the employee");
-            Console.WriteLine("1.Cloud Engineering \n2.Core Technology Operations \n3.Core Industry Solutions " +
-                "\n4.Application Modernisation \n5.Operations Transformations");
-            Offering = Convert.ToChar(Console.ReadLine());
+            Offering = employeeAccess.CheckOffering();
 
             switch (Offering)
             {
@@ -131,9 +124,42 @@ namespace OnboardingSystem
             Console.WriteLine("Enter the Employee ID to update:");
             int empID = Convert.ToInt32(Console.ReadLine()); 
         }
-        public void CheckSkillset()
+        public void GetSkillsReq()
         {
-
+            Offering = employeeAccess.CheckOffering();
+            switch (Offering)
+            {
+                case '1':
+                    foreach (string item in CloudEngineering.Skills)
+                    {
+                        Console.WriteLine(item);
+                    }
+                    break;
+                case '2':
+                    foreach (string item in CoreTechnologyOps.Skills)
+                    {
+                        Console.WriteLine(item);
+                    }
+                    break;
+                case '3':
+                    foreach (string item in CoreIndustrySolutions.Skills)
+                    {
+                        Console.WriteLine(item);
+                    }
+                    break;
+                case '4':
+                    foreach (string item in ApplicationModernisation.Skills)
+                    {
+                        Console.WriteLine(item);
+                    }
+                    break;
+                case '5':
+                    foreach (string item in OpsTransformations.Skills)
+                    {
+                        Console.WriteLine(item);
+                    }
+                    break;
+            }
         }
     }
 }
