@@ -10,41 +10,52 @@ namespace OnboardingSystem
     {
         static void Main(string[] args)
         {
-            char ch;
-            char choice='y';
-            CoreBusinessOps cboObj = new CoreBusinessOps();
-            while (choice == 'y')
+            try
             {
-               
-                Console.WriteLine("1.Enter Employee \n2.Print Details \n3.Check Skillset \n4.Search Employee \n5.Update Employee\n6.Delete Employee");
-                Console.Write("\nEnter your Choice:");
-                ch = Convert.ToChar(Console.ReadLine());
-                switch(ch)
+                char ch;
+                char choice = 'y';
+                CoreBusinessOps cboObj = new CoreBusinessOps();
+                while (choice == 'y')
+                {
+
+                    Console.WriteLine("1.Enter Employee \n2.Print Details \n3.Check Skillset \n4.Search Employee \n5.Delete Employee\n6.Update Employee");
+                    Console.Write("\nEnter your Choice:");
+                    ch = Convert.ToChar(Console.ReadLine());
+                    switch (ch)
                     {
-                     case '1':
-                        cboObj.AddEmployee();
-                           break;
-                     case '2':
-                        cboObj.PrintDetails();
-                        Console.WriteLine("Employee Printed");
+                        case '1':
+                            cboObj.AddEmployee();
                             break;
-                     case '3':
-                        cboObj.GetSkillsReq();
-                        break;
+                        case '2':
+                            cboObj.PrintDetails();
+                            Console.WriteLine("Employee Printed");
+                            break;
+                        case '3':
+                            cboObj.GetSkillsReq();
+                            break;
 
-                    case '4':
-                        cboObj.SearchEmployee();
-                        break;
+                        case '4':
+                            Employee emp;
+                            Console.WriteLine("Enter the employee ID to search");
+                            int id = Convert.ToInt32(Console.ReadLine());
+                            emp = cboObj.SearchEmployee(id);
+                            break;
+                        case '5':
+                            Console.WriteLine("Enter the employee ID to Delete");
+                            int uid = Convert.ToInt32(Console.ReadLine());
+                            cboObj.DeleteEmployee(uid);
+                            break;
 
-                    case '5':
-                        cboObj.UpdateEmployee();
-                        break;
-                    
                     }
-                Console.WriteLine("Do you wish to continue?(y/n)");
-                choice = Convert.ToChar(Console.ReadLine());
-                Console.Clear();
-            }    
+                    Console.WriteLine("Do you wish to continue?(y/n)");
+                    choice = Convert.ToChar(Console.ReadLine());
+                    Console.Clear();
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }

@@ -64,137 +64,180 @@ namespace OnboardingSystem
         public void PrintDetails()
         {
 
-
-            Offering = employeeAccess.CheckOffering();
-
-            switch (Offering)
+            try
             {
-                case '1':
-                    foreach (CloudEngineering item in CloudEngineeringsList)
-                    {
-                        //item.PrintCloudEmployee();
-                        employeeAccess.PrintDetails(item.empObj);
-                    }
-                    break;
-                case '2':
-                    foreach (CoreTechnologyOps item in CoreTechnologyOpsList)
-                    {
-                        employeeAccess.PrintDetails(item.empObj);
-                    }
-                    break;
-                case '3':
-                    foreach (CoreIndustrySolutions item in CoreIndustrySolutionsList)
-                    {
-                        employeeAccess.PrintDetails(item.empObj);
-                    }
-                    break;
-                case '4':
-                    foreach (ApplicationModernisation item in ApplicationModernisationList)
-                    {
-                        employeeAccess.PrintDetails(item.empObj);
-                    }
-                    break;
-                case '5':
-                    foreach (OpsTransformations item in OpsTransformationsList)
-                    {
-                        employeeAccess.PrintDetails(item.empObj);
-                    }
-                    break;
-                    
+                Offering = employeeAccess.CheckOffering();
+                switch (Offering)
+                {
+                    case '1':
+                        foreach (CloudEngineering item in CloudEngineeringsList)
+                        {
+                            //item.PrintCloudEmployee();
+                            employeeAccess.PrintDetails(item.empObj);
+                        }
+                        break;
+                    case '2':
+                        foreach (CoreTechnologyOps item in CoreTechnologyOpsList)
+                        {
+                            employeeAccess.PrintDetails(item.empObj);
+                        }
+                        break;
+                    case '3':
+                        foreach (CoreIndustrySolutions item in CoreIndustrySolutionsList)
+                        {
+                            employeeAccess.PrintDetails(item.empObj);
+                        }
+                        break;
+                    case '4':
+                        foreach (ApplicationModernisation item in ApplicationModernisationList)
+                        {
+                            employeeAccess.PrintDetails(item.empObj);
+                        }
+                        break;
+                    case '5':
+                        foreach (OpsTransformations item in OpsTransformationsList)
+                        {
+                            employeeAccess.PrintDetails(item.empObj);
+                        }
+                        break;
+
+                }
+            }
+            catch (Exception e)
+            {
+
+                Console.WriteLine(e.Message);
             }
             
         }
 
-        public void UpdateEmployee()
+        public void DeleteEmployee(int id)
         {
-            Offering = employeeAccess.CheckOffering();
-
-            switch (Offering)
+            try
             {
-                case '1':
-                    break;
-                case '2':
-                    break;
-                case '3':
-                    break;
-                case '4':
-                    break;
-                case '5':
-                    break;
+                Employee eobj;
+                eobj = SearchEmployee(id);
+                if(CloudEngineeringsList.Contains(eobj))
+                {
+                    
+                }
+
+                else if (CoreTechnologyOpsList.Contains(eobj))
+                {
+
+                }
+
+                else if (CoreIndustrySolutionsList.Contains(eobj))
+                {
+
+                }
+                
+                else if (ApplicationModernisationList.Contains(eobj))
+                {
+
+                }
+
+                else if (OpsTransformationsList.Contains(eobj))
+                {
+
+                }
+
             }
-            Console.WriteLine("Enter the Employee ID to update:");
-            int empID = Convert.ToInt32(Console.ReadLine()); 
+            catch (Exception e)
+            {
+
+                Console.WriteLine(e.Message);
+            }
         }
         public void GetSkillsReq()
         {
-            Offering = employeeAccess.CheckOffering();
-            switch (Offering)
+            try
             {
-                case '1':
-                    foreach (string item in CloudEngineering.Skills)
-                    {
-                        Console.WriteLine(item);
-                    }
-                    break;
-                case '2':
-                    foreach (string item in CoreTechnologyOps.Skills)
-                    {
-                        Console.WriteLine(item);
-                    }
-                    break;
-                case '3':
-                    foreach (string item in CoreIndustrySolutions.Skills)
-                    {
-                        Console.WriteLine(item);
-                    }
-                    break;
-                case '4':
-                    foreach (string item in ApplicationModernisation.Skills)
-                    {
-                        Console.WriteLine(item);
-                    }
-                    break;
-                case '5':
-                    foreach (string item in OpsTransformations.Skills)
-                    {
-                        Console.WriteLine(item);
-                    }
-                    break;
+                Offering = employeeAccess.CheckOffering();
+                switch (Offering)
+                {
+                    case '1':
+                        foreach (string item in CloudEngineering.Skills)
+                        {
+                            Console.WriteLine(item);
+                        }
+                        break;
+                    case '2':
+                        foreach (string item in CoreTechnologyOps.Skills)
+                        {
+                            Console.WriteLine(item);
+                        }
+                        break;
+                    case '3':
+                        foreach (string item in CoreIndustrySolutions.Skills)
+                        {
+                            Console.WriteLine(item);
+                        }
+                        break;
+                    case '4':
+                        foreach (string item in ApplicationModernisation.Skills)
+                        {
+                            Console.WriteLine(item);
+                        }
+                        break;
+                    case '5':
+                        foreach (string item in OpsTransformations.Skills)
+                        {
+                            Console.WriteLine(item);
+                        }
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+
+                Console.WriteLine(e.Message);
             }
         }
 
 
-        public int  SearchEmployee()
+        public Employee  SearchEmployee(int id)
         {
-            Console.WriteLine("Enter the employee ID to search");
-            int id = Convert.ToInt32(Console.ReadLine());
-            foreach (CloudEngineering item in CloudEngineeringsList)
+            Employee empObj = new Employee();
+            try
             {
-                if (employeeAccess.Search(item.empObj, id) == 1)
-                    return 1;
+                foreach (CloudEngineering item in CloudEngineeringsList)
+                {
+                    empObj = employeeAccess.Search(item.empObj, id);
+                    if(empObj!=null)
+                        return empObj;
+                }
+                foreach (CoreIndustrySolutions item in CoreIndustrySolutionsList)
+                {
+                    empObj = employeeAccess.Search(item.empObj, id);
+                    if (empObj != null)
+                        return empObj;
+                }
+                foreach (CoreTechnologyOps item in CoreTechnologyOpsList)
+                {
+                    empObj = employeeAccess.Search(item.empObj, id);
+                    if (empObj != null)
+                        return empObj;
+                }
+                foreach (ApplicationModernisation item in ApplicationModernisationList)
+                {
+                    empObj = employeeAccess.Search(item.empObj, id);
+                    if (empObj != null)
+                        return empObj;
+                }
+                foreach (OpsTransformations item in OpsTransformationsList)
+                {
+                    empObj = employeeAccess.Search(item.empObj, id);
+                    if (empObj != null)
+                        return empObj;
+                }
             }
-            foreach (CoreIndustrySolutions item in CoreIndustrySolutionsList)
+            catch (Exception e)
             {
-                if (employeeAccess.Search(item.empObj, id) == 1)
-                    return 1;
-            }
-            foreach (CoreTechnologyOps item in CoreTechnologyOpsList)
-            {
-                if (employeeAccess.Search(item.empObj, id) == 1)
-                    return 1;
-            }
-            foreach (ApplicationModernisation item in ApplicationModernisationList)
-            {
-                if (employeeAccess.Search(item.empObj, id) == 1)
-                    return 1;
-            }
-            foreach (OpsTransformations item in OpsTransformationsList)
-            {
-                if (employeeAccess.Search(item.empObj, id) == 1)
-                    return 1;
-            }
 
-            return 0;
+                Console.WriteLine(e.Message);
+            }
+            return empObj;
         }
     }
 }

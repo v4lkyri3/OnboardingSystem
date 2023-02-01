@@ -41,32 +41,66 @@ namespace OnboardingSystem
 
         public char CheckOffering()
         {
-            
-            Console.WriteLine("\n1.Cloud Engineering \n2.Core Technology Operations \n3.Core Industry Solutions " +
-                "\n4.Application Modernisation \n5.Operations Transformations");
-            Console.Write("\nEnter the subdomain of the employee:");
-            char offering = Convert.ToChar(Console.ReadLine());
+            char offering='0';
+            try
+            {
+                Console.WriteLine("\n1.Cloud Engineering \n2.Core Technology Operations \n3.Core Industry Solutions " +
+               "\n4.Application Modernisation \n5.Operations Transformations");
+                Console.Write("\nEnter the subdomain of the employee:");
+                offering = Convert.ToChar(Console.ReadLine());
+            }
+            catch (Exception e)
+            {
+
+                Console.WriteLine(e.Message);
+            }
+           
             return offering;
         }
 
 
         public void PrintDetails(Employee empObj)
         {
-            Console.WriteLine("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}", empObj.EmployeeId, empObj.EmployeeName, empObj.EmployeeAge, empObj.Address,
+            try
+            {
+                Console.WriteLine("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}", empObj.EmployeeId, empObj.EmployeeName, empObj.EmployeeAge, empObj.Address,
                 empObj.PhoneNumber, empObj.EmailId, empObj.JoiningDate);
+            }
+            catch (Exception e)
+            {
+
+                Console.WriteLine(e.Message);
+            }
+            
         }
 
 
-        public int Search(Employee emp,int id)
+        public Employee Search(Employee emp,int id,int op=0)
         {
-
-            if (emp.EmployeeId == id)
+            Employee temp = null;
+            try
             {
-                Console.WriteLine("Employee Found in {0}!!", emp.EmployeeRole);
-                PrintDetails(emp);
-                return 1;
+                if (emp.EmployeeId == id)
+                {
+                    temp = emp;
+                    Console.Clear();
+                    Console.WriteLine("Employee Found in {0}!!", emp.EmployeeRole);
+                    PrintDetails(emp);
+                }
+                Console.WriteLine("Employee Not Found!!");
             }
-            return 0;
+            catch (Exception e)
+            {
+
+                Console.WriteLine(e.Message);
+            }
+            return temp;
+        }
+
+        public void Update(Employee emp)
+        {
+            Console.WriteLine("Enter the");   
         }
     }
+
 }
