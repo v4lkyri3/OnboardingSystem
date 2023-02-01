@@ -80,15 +80,15 @@ namespace OnboardingSystem
                     }
                     break;
                 case '2':
-                    foreach (CoreIndustrySolutions item in CoreIndustrySolutionsList)
-                    {
-                        item.PrintCISEmployee();
-                    }
-                    break;
-                case '3':
                     foreach (CoreTechnologyOps item in CoreTechnologyOpsList)
                     {
                         item.PrintCTSEmployee();
+                    }
+                    break;
+                case '3':
+                    foreach (CoreIndustrySolutions item in CoreIndustrySolutionsList)
+                    {
+                        item.PrintCISEmployee();
                     }
                     break;
                 case '4':

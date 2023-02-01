@@ -22,9 +22,9 @@ namespace OnboardingSystem
 
         public void PrintCloudEmployee()
         {
-    
-            Console.WriteLine("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}",empObj.EmployeeId, empObj.EmployeeName, empObj.EmployeeAge, empObj.Address,
-                empObj.PhoneNumber, empObj.EmailId, empObj.JoiningDate);
+            Console.WriteLine("{0} {1}", empObj.EmployeeId, empObj.EmployeeName);
+            //Console.WriteLine("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}",empObj.EmployeeId, empObj.EmployeeName, empObj.EmployeeAge, empObj.Address,
+            //    empObj.PhoneNumber, empObj.EmailId, empObj.JoiningDate);
         }
     }
 }
