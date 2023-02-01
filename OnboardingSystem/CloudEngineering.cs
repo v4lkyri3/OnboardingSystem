@@ -12,12 +12,21 @@ namespace OnboardingSystem
         public Employee empObj;
         public void GetSkills()
         {
-            
+            Console.WriteLine("The Skillset you would require in this offering:");
+            foreach (string item in SkillSet)
+            {
+                Console.WriteLine(item);
+            }
+
         }
 
         public CloudEngineering(Employee employeeObj)
         {
             empObj = employeeObj;
+            SkillSet = new List<string>()
+            {
+                "Java","C#","SQL"
+            };
         }
 
         public void PrintCloudEmployee()

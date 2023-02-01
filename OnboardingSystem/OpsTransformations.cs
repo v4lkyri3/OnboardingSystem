@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,10 @@ namespace OnboardingSystem
         public OpsTransformations(Employee emp)
         {
             empObj = emp;
+            SkillSet = new List<string>()
+            {
+                "Java","C#","SQL"
+            };
         }
         public void PrintOTEmployee()
         {
@@ -22,6 +27,11 @@ namespace OnboardingSystem
         }
         public void GetSkills()
         {
+            Console.WriteLine("The Skillset you would require in this offering:");
+            foreach (string item in SkillSet)
+            {
+                Console.WriteLine(item);
+            }
 
         }
     }

@@ -13,6 +13,10 @@ namespace OnboardingSystem
         public CoreTechnologyOps(Employee emp)
         {
             empObj = emp;
+            SkillSet = new List<string>()
+            {
+                "Java","C#","SQL"
+            };
         }
         public void PrintCTSEmployee()
         {
@@ -22,6 +26,11 @@ namespace OnboardingSystem
         }
         public void GetSkills()
         {
+            Console.WriteLine("The Skillset you would require in this offering:");
+            foreach (string item in SkillSet)
+            {
+                Console.WriteLine(item);
+            }
 
         }
     }

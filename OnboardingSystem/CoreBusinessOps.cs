@@ -65,7 +65,7 @@ namespace OnboardingSystem
 
         public void PrintDetails()
         {
-            Console.WriteLine("EmployeeID\tEmployee Name\tAge\tAddress\tPhone Number\tEmail ID\tJoining Date");
+         
             Console.WriteLine("Enter the subdomain of the employee");
             Console.WriteLine("1.Cloud Engineering \n2.Core Technology Operations \n3.Core Industry Solutions " +
                 "\n4.Application Modernisation \n5.Operations Transformations");
@@ -131,6 +131,9 @@ namespace OnboardingSystem
             Console.WriteLine("Enter the Employee ID to update:");
             int empID = Convert.ToInt32(Console.ReadLine()); 
         }
+        public void CheckSkillset()
+        {
 
+        }
     }
 }
