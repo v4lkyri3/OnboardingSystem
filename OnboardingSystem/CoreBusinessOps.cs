@@ -335,6 +335,98 @@ namespace OnboardingSystem
 
         //Get Common Skills
 
+        //public void CommonSkills(int id)
+        //{
+        //    Employee eobj;
+        //    int i = 0;
+        //    string[] skills = new string[] { };
+        //    eobj = SearchEmployee(id);
+
+        //    if (eobj != null)
+        //        return;
+
+        //    else if (eobj.EmployeeRole.Equals("Cloud Engineering"))
+        //    {
+        //        for (i = 0; i < CloudEngineeringsList.Count; i++)
+        //        {
+        //            if (CloudEngineeringsList[i].empObj.EmployeeId == id)
+        //            {
+        //                CloudEngineeringsList[i].GetSkills().CopyTo(skills);
+        //                break;
+        //            }
+        //        }
+
+        //    }
+
+        //    else if (eobj.EmployeeRole.Equals("Core Industry Solutions"))
+        //    {
+        //        for (i = 0; i < CoreIndustrySolutionsList.Count; i++)
+        //        {
+        //            if (CoreIndustrySolutionsList[i].empObj.EmployeeId == id)
+        //            {
+        //                CoreIndustrySolutionsList[i].GetSkills().CopyTo(skills);
+        //                break;
+        //            }
+        //        }
+
+        //    }
+
+        //    else if (eobj.EmployeeRole.Equals("Core Technology Operations"))
+        //    {
+        //        for (i = 0; i < CoreTechnologyOpsList.Count; i++)
+        //        {
+        //            if (CoreTechnologyOpsList[i].empObj.EmployeeId == id)
+        //            {
+        //                CoreTechnologyOpsList[i].GetSkills().CopyTo(skills);
+        //                break;
+        //            }
+        //        }
+
+        //    }
+
+        //    else if (eobj.EmployeeRole.Equals("Application Modernisation"))
+        //    {
+        //        for (i = 0; i < ApplicationModernisationList.Count; i++)
+        //        {
+        //            if (ApplicationModernisationList[i].empObj.EmployeeId == id)
+        //            {
+        //                ApplicationModernisationList[i].GetSkills().CopyTo(skills);
+        //                break;
+        //            }
+        //        }
+
+        //    }
+
+        //    else if (eobj.EmployeeRole.Equals("Operation Transformations"))
+        //    {
+        //        for (i = 0; i < OpsTransformationsList.Count; i++)
+        //        {
+        //            if (OpsTransformationsList[i].empObj.EmployeeId == id)
+        //            {
+        //                OpsTransformationsList[i].GetSkills().CopyTo(skills);
+        //                break;
+        //            }
+        //        }
+        //    }
+        //    else
+        //        return;
+
+        //    Console.WriteLine(skills.Length);
+        //    if (skills[0] != null)
+        //    {
+        //        Console.WriteLine("\nCommon Skills are:");
+        //        foreach (string item in skills)
+        //        {
+        //            Console.Write("{0}  ", item);
+        //        }
+        //        Console.WriteLine("\n");
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("\nNo common Skills!!");
+        //    }
+        //}
+
         public void CommonSkills(int eid)
         {
             Employee emp;
@@ -385,7 +477,7 @@ namespace OnboardingSystem
                         }
                         break;
                 }
-                if (skills.Length > 0 && skills!=null)
+                if (skills.Length > 0 && skills != null)
                 {
                     Console.WriteLine("\nCommon Skills are:");
                     foreach (string item in skills)

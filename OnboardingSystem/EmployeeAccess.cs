@@ -47,16 +47,16 @@ namespace OnboardingSystem
                 emp.EmployeeId = Count;
                 Console.WriteLine("\nEnter Employee Name:");
                 emp.EmployeeName = Console.ReadLine();
-                //Console.WriteLine("Enter Employee Age:");
-                //emp.EmployeeAge = Convert.ToInt32(Console.ReadLine());
-                //Console.WriteLine("Enter Address:");
-                //emp.Address = Console.ReadLine();
-                //Console.WriteLine("Enter Phone Number:");
-                //emp.PhoneNumber = Convert.ToInt64(Console.ReadLine());
-                //Console.WriteLine("Enter Email ID:");
-                //emp.EmailId = Console.ReadLine();
-                //Console.WriteLine("Enter Joining Date:");
-                //emp.JoiningDate = Console.ReadLine();
+                Console.WriteLine("Enter Employee Age:");
+                emp.EmployeeAge = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Enter Address:");
+                emp.Address = Console.ReadLine();
+                Console.WriteLine("Enter Phone Number:");
+                emp.PhoneNumber = Convert.ToInt64(Console.ReadLine());
+                Console.WriteLine("Enter Email ID:");
+                emp.EmailId = Console.ReadLine();
+                Console.WriteLine("Enter Joining Date:");
+                emp.JoiningDate = Console.ReadLine();
                 Console.WriteLine("Enter the no. of skills you have:");
                 int n=Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Enter all your skills:");
@@ -84,8 +84,8 @@ namespace OnboardingSystem
         {
             try
             {
-                Console.WriteLine("\n{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}", empObj.EmployeeId, empObj.EmployeeName, empObj.EmployeeAge, empObj.Address,
-                empObj.PhoneNumber, empObj.EmailId, empObj.JoiningDate,empObj);
+                Console.WriteLine("\nEmployee ID:{0}  Name:{1}  Age:{2}   Address:{3}   Phone:{4}   Email ID:{5}  \nJoining Date:{6}  Role:{7}", empObj.EmployeeId, empObj.EmployeeName, empObj.EmployeeAge, empObj.Address,
+                empObj.PhoneNumber, empObj.EmailId, empObj.JoiningDate,empObj.EmployeeRole);
                 Console.Write("Skills: ");
                 foreach (string item in empObj.SkillSet)
                 {
